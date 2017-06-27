@@ -1,0 +1,20 @@
+{
+  "name": "faa-info",
+  "version": "1.0.0",
+  "description": "get airport info, bigNerdRanch tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "C White",
+  "license": "ISC",
+  "dependencies": {
+    "alexa-app": "^4.0.1",
+    "alexa-app-server": "^3.0.1",
+    "chai": "^4.0.2",
+    "chai-as-promised": "^7.0.0",
+    "lodash": "^4.17.4",
+    "mocha": "^3.4.2",
+    "request-promise": "^4.2.1"
+  }
+}
