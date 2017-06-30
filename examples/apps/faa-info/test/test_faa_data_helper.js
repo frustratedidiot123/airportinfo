@@ -69,5 +69,5 @@ describe('FAADataHelper', function() {
         );
       });
     });
-  });  
+  });
 });
