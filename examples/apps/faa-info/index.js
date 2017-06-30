@@ -21,7 +21,7 @@ app.intent('airportinfo', {
     //get the slot
     var airportCode = req.slot('AIRPORTCODE');
     var reprompt = 'Tell me an airport code to get delay information.';
-if (_.isEmpty(airportCode)) {
+    if (_.isEmpty(airportCode)) {
       var prompt = 'I didn\'t hear an airport code. Tell me an airport code.';
       res.say(prompt).reprompt(reprompt).shouldEndSession(false);
       return true;
