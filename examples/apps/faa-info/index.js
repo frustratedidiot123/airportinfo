@@ -7,7 +7,7 @@ var FAADataHelper = require('./faa_data_helper');
 
 app.launch(function(req, res) {
   var prompt = 'For delay information, give me an Airport code.';
-  var reprompt = 'Please tell your Airport code';
+  var reprompt = 'Please tell me your Airport code';
   res.say(prompt).reprompt(reprompt).shouldEndSession(false);
 });
 
