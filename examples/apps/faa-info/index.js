@@ -42,6 +42,42 @@ app.intent('airportinfo', {
   }
 );
 
+alexaApp.intent("AMAZON.HelpIntent", {
+  "slots": {} },
+//"utterances": [ 
+ //              "help", "help me"
+  //              ]
+//  },
+  function(request, response) {
+  var HELP_MESSAGE =  "To hear delay information for a particular airport, just tell me the Airport code. You can say stop to exit.";
+var HELP_REPROMPT = "Tell me an airport code to hear about delays.";
+ response.say(HELP_MESSAGE).reprompt(HELP_REPROMPT).shouldEndSession(false);
+  }
+ );
+
+alexaApp.intent("AMAZON.StopIntent", {
+  "slots": {} },
+//"utterances": [ 
+ //              "help", "help me"
+  //              ]
+//  },
+  function(request, response) {
+    response.say("Ok. Goodbye!").shouldEndSession(true);
+  }
+ );
+
+alexaApp.intent("AMAZON.CancelIntent", {
+  "slots": {} },
+//"utterances": [ 
+ //              "help", "help me"
+  //              ]
+//  },
+  function(request, response) {
+    response.say("Ok. Goodbye!").shouldEndSession(true);
+  }
+ );
+
+
 // utterance hack
 var utterancesMethod = app.utterances;
 app.utterances = function () {
