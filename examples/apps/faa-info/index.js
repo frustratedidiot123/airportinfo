@@ -1,6 +1,14 @@
 'use strict';
 module.change_code = 1;
 var _ = require('lodash');
+var express = require("express");
+var PORT = process.env.PORT || 8080;
+var app = express();
+
+// ALWAYS setup the alexa app and attach it to express before anything else.
+var alexaApp = new alexa.app("delayinfo");
+
+alexaApp.express({expressApp: expressApp, router: express.Router(), debug: false, checkCert: true});
 var Alexa = require('alexa-app');
 var app = new Alexa.app('airportinfo');
 var FAADataHelper = require('./faa_data_helper');
@@ -83,5 +91,10 @@ var utterancesMethod = app.utterances;
 app.utterances = function () {
   return utterancesMethod().replace(/\{\-\|/g, '{');
 };
+
+
+expressApp.listen(process.env.PORT || 5000, function() {
+    console.log('Palette Buddy Running');
+});
 
 module.exports = app;
