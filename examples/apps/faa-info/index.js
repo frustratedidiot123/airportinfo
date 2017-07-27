@@ -48,7 +48,7 @@ app.intent('airportinfo', {
   }
 );
 
-alexaApp.intent("AMAZON.HelpIntent", {
+app.intent("AMAZON.HelpIntent", {
   "slots": {} },
 //"utterances": [ 
  //              "help", "help me"
@@ -61,7 +61,7 @@ var HELP_REPROMPT = "Tell me an airport code to hear about delays.";
   }
  );
 
-alexaApp.intent("AMAZON.StopIntent", {
+app.intent("AMAZON.StopIntent", {
   "slots": {} },
 //"utterances": [ 
  //              "help", "help me"
@@ -72,7 +72,7 @@ alexaApp.intent("AMAZON.StopIntent", {
   }
  );
 
-alexaApp.intent("AMAZON.CancelIntent", {
+app.intent("AMAZON.CancelIntent", {
   "slots": {} },
 //"utterances": [ 
  //              "help", "help me"
@@ -93,7 +93,7 @@ app.utterances = function () {
 
 var PORT = process.env.PORT || 8080;
 expressApp.listen(process.env.PORT || 5000, function() {
-    console.log('Palette Buddy Running');
+    console.log('overlapy Running');
 });
 
-module.exports = app;
+//module.exports = app;
