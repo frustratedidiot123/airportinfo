@@ -6,7 +6,7 @@ var PORT = process.env.PORT || 8080;
 var app = express();
 
 // ALWAYS setup the alexa app and attach it to express before anything else.
-var alexaApp = new alexa.app("delayinfo");
+var alexaApp = new alexa.app("airportinfo");
 
 alexaApp.express({expressApp: expressApp, router: express.Router(), debug: false, checkCert: true});
 var Alexa = require('alexa-app');
